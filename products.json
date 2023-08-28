@@ -1,0 +1,63 @@
+[
+    {
+    "name":"iphone x",
+    "price": 500,
+    "feature":true,
+    "company": "apple"
+    },
+    {
+        "name":"iphone 14",
+        "price": 800,
+        "feature":true,
+        "company": "apple"
+    },
+    {
+        "name":"Galexy s21 ultra",
+        "price": 1000,
+        "feature":true,
+        "company": "samsung"
+    },
+    {
+        "name":"Galexy s22 ultra",
+        "price": 1100,
+        "feature":true,
+        "company": "samsung"
+    },
+    {
+        "name":"Dell Vostro 14 laptop",
+        "price": 5000,
+        "feature":false,
+        "company": "dell"
+    },
+    {
+        "name":"Dell inspiron laptop",
+        "price": 5200,
+        "feature":true,
+        "company": "dell"
+    },
+    {
+        "name":"Mi 13 Pro",
+        "price": 700,
+        "feature":true,
+        "company": "dell"
+    },
+    {
+        "name":"Mi 14 Pro",
+        "price": 750,
+        "feature":false,
+        "company": "dell"
+    },
+    {
+        "name":"Smart watch",
+        "price": 150,
+        "feature":true,
+        "company": "mi"
+    },
+    {
+        "name":"Smart watch pro",
+        "price": 350,
+        "feature":false,
+        "company": "mi"
+    }
+
+]
