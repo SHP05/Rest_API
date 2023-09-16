@@ -1,17 +1,1 @@
-1 Create server
-2 setup Routes and controllers using Express
-    -it is similar as React Contex API and Reducers
 
-    - create two folders routes and controllers
-    - create a file product.js in both folder
-    - define routes in routes and define function in controllers
-    - export all routes and dunctions then imoort it in app.js
-
-3 creade db and database
-  create Schema and model
-
-4 Transfer json file data to database without create object
-    -create one json file , ProductDB.js       
-    -import all three file in productDB file - schema ,databasefile , json ile
-    -make one function which create one cl=ollection using schema file and then pass json file into it
-    -only ProductDB is used for transfer data from json to db and it run one time individualy so our data will save in collection
