@@ -1,4 +1,3 @@
-const { name } = require("ejs");
 const Product = require("../models/product"); //model 
 
 const getAllProducts = async(req,res) =>{
@@ -63,6 +62,34 @@ const getAllProducts = async(req,res) =>{
     // res.status(200).json({msg : "I am getAllProducts "});
 }
 
+//create product
+const createProduct = async (req,res,next) =>{
+    console.log(req.body.name);
+    await Product.create({
+        name:req.body.name , 
+        price:req.body.price , 
+        feature:req.body.feature , 
+        rating:req.body.rating ,
+        company:req.body.company
+    })
+    .then((result)=>res.json({message:"New Product is Added",data:result}))
+    .catch(err => res.json({message:"Not Add any Product",err}));
+}
+
+const deleteProduct = async (req,res,next) => {
+    await Product.findByIdAndDelete(req.body.id)
+    .then(result => res.json({message : "Product is Deleted",result}))
+    .catch(err => res.json({message:"Product is not Deleted"}));
+}
+
+const updateProduct = async (req,res,next) => {
+    const updatedData = req.body;
+    await Product.findByIdAndUpdate(req.body.id,updatedData)
+    .then(result => res.json({message:"Product Data is updated"}))
+    .catch(err => res.json('Product is not update',err));
+}
+
+
 const getAllProductsTesting = async(req,res) =>{
     const mydata =  await Product.find(req.query)
     // const mydata =  await Product.find(req.query).select("name price")
@@ -70,4 +97,5 @@ const getAllProductsTesting = async(req,res) =>{
     res.status(200).json({mydata});
     // res.status(200).json({msg : "I am getAllProductsTesting "});
 }
-module.exports = { getAllProducts , getAllProductsTesting };
+
+module.exports = { getAllProducts , getAllProductsTesting ,createProduct , updateProduct , deleteProduct};

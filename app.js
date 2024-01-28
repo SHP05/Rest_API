@@ -1,20 +1,21 @@
 const  express = require('express')
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3030;
 
+app.use(express.json());
 //connect with mongodb
 const mongoose = require('./db/connect');
 
 // path of router file
 const product_routes = require("./routes/products");
 
-// app.get('/' , (req,res)=>{
-//     res.send("Hii I am live ");
-// });
+app.get('/' , (req,res)=>{
+    res.send("Hii I am live ");
+});
 
 
 //  middleware or to set router
-app.use("/", product_routes); //if we write in url like api/product then our routes will display
+app.use("/product",product_routes); //if we write in url like api/product then our routes will display
 
 const start = async ()=>{
     try{
