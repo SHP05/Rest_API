@@ -34,9 +34,11 @@ To install and run this API locally, follow these steps:
    cd Rest_API
 
 2. Install dependencies:
+   ```bash
     npm install
 
 3. Start the API:
+    ```bash
     npm start    
 
 4. Usage
@@ -61,6 +63,7 @@ The API provides the following endpoints:
 
 ### Request
     http://localhost:3030/product/testing
+
 
   Provide all Data
 
